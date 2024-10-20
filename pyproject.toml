@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "thku-rss"
+version = "0.0.1"
+dependencies = [
+	"bs4",
+	"requests",
+	"rfeed",
+	"loguru",
+]
+requires-python = ">=3.8"
+description = "THK Üniversitesi internet sitesinde yapılan duyuruları XML dosyası biçiminde RSS kaynağına dönüştürücü"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+authors = [
+	{name = "Doğukan Meral", email = "dogukan.meral@hotmail.com"},
+]
+
+[project.urls]
+Repository = "https://github.com/dogukanmeral/thku-rss"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/thku_rss",
+]
+
+[project.scripts]
+thku_rss = "thku_rss.__init__:main"
