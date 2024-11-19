@@ -40,14 +40,6 @@ class html_parser:
 	def get_link(self, item_no:int) -> str:
 		return self.get_href(str(self.bs.select(self.get_css_selector(item_no, "link"))))
 
-
-	def get_description_as_html(self, item_link:str) -> str:
-		request = requests.get(item_link, verify=False)
-		bs = BeautifulSoup(request.content, "html.parser")
-		
-		return str(bs.select(self.css_selectors["description"]))[1:-1]
-	
-
 	def get_item_elements(self, item_no:int) -> tuple:
 		title = self.get_title(item_no) 
 		
@@ -55,6 +47,5 @@ class html_parser:
 		date = dt(int(year), int(month), int(day)).isoformat()
 		
 		link = self.get_link(item_no)
-		description_html = self.get_description_as_html(link)
 		
-		return (title, date, link, description_html)
+		return (title, date, link)
