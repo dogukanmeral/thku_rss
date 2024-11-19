@@ -1,13 +1,12 @@
 {
 	"max_feed_items":12,
-	"log_folder_path":"/home/dogumer/thku_rss/logs/",
+	"log_folder_path":"~/thku_rss/logs/",
 	"css_selectors":{
 		"flex_container":"#tab_1000 > div:nth-child(1)",
 		"div":"#tab_1001 > div > div:nth-child(*) > div > div > ",
 		"title":"div.page-inner > h5",
 		"date":"div.duyuru-page-date > div",
-		"link":"div.duyuru-page-date > a",
-		"description":".content-title"	
+		"link":"div.duyuru-page-date > a"
 	},
 	
 	"feeds":[
@@ -16,14 +15,7 @@
 			"link":"https://thk.edu.tr/duyurular",
 			"description":"Türk Hava Kurumu Üniversitesi'nin internet sitesinde yapılan son duyuruları içeren RSS kaynağı",
 			"db_table":"MAIN",
-			"xml_file_path":"/home/dogumer/thku_rss/main.xml"
-		},
-		{
-			"title":"THKÜ ERASMUS Duyurular RSS",
-			"link":"https://erasmus.thk.edu.tr/duyurular",
-			"description":"Türk Hava Kurumu Üniversitesi'nde ERASMUS programı hakkında yapılan son duyuruları içeren RSS kaynağı",
-			"db_table":"ERASMUS",
-			"xml_file_path":"/home/dogumer/thku_rss/erasmus.xml"
+			"xml_file_path":"~/thku_rss/main.xml"
 		}
 	]
 }
