@@ -4,12 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "thku-rss"
-version = "0.0.1"
+version = "0.1.0"
 dependencies = [
 	"bs4",
 	"requests",
 	"rfeed",
 	"loguru",
+	"texteditor",
 ]
 requires-python = ">=3.8"
 description = "THK Üniversitesi internet sitesinde yapılan duyuruları XML dosyası biçiminde RSS kaynağına dönüştürücü"
@@ -28,4 +29,4 @@ include = [
 ]
 
 [project.scripts]
-thku_rss = "thku_rss.__init__:main"
+thku_rss = "thku_rss.__init__:launch"
