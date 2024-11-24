@@ -2,7 +2,9 @@
 THKÜ RSS, Türk Hava Kurumu Üniversitesi internet sayfalarında yapılan duyurularından RSS kaynağı oluşturan bir Python paketidir.
 
 ### Kurulumu
-Python paket yöneticisi kullanarak: `pip install thku_rss`
+1. Klonlama: `git clone https://github.com/dogukanmeral/thku_rss`
+2. Paketi oluşturma([Hatchling](https://pypi.org/project/hatchling/) ile): `hatchling build`
+3. Kurulum: `pip install dist/*.whl`
 
 ### Kullanımı
 Kurulum: 
